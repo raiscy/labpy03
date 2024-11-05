@@ -85,7 +85,57 @@ PENJELASAN PROGRAM LABA :
 5. Menampilkan laba perbulan
 6. Yang terakhir adalah menampilkan total
 
+# Latihan 3 
+Buat program yang mensimulasikan mesin ATM sederhana. Pengguna memiliki saldo awal sebesar Rp 1.000.000, dan dapat menarik uang hingga saldo habis atau memilih untuk keluar.
 
+       class ATM:
+    def __init__(self):
+        self.saldo = 1000000  # saldo awal
+
+    def tampilkan_saldo(self):
+        print(f"Saldo Anda saat ini: Rp {self.saldo}")
+
+    def tarik_uang(self, jumlah):
+        if jumlah > self.saldo:
+            print("Saldo tidak cukup untuk menarik uang tersebut.")
+        elif jumlah <= 0:
+            print("Jumlah penarikan harus lebih besar dari 0.")
+        else:
+            self.saldo -= jumlah
+            print(f"Anda telah menarik: Rp {jumlah}")
+            self.tampilkan_saldo()
+
+    def menu(self):
+        while True:
+            print("\n=== Mesin ATM Sederhana ===")
+            print("1. Tampilkan Saldo")
+            print("2. Tarik Uang")
+            print("3. Keluar")
+            pilihan = input("Pilih menu (1/2/3): ")
+
+            if pilihan == '1':
+                self.tampilkan_saldo()
+            elif pilihan == '2':
+                jumlah = int(input("Masukkan jumlah uang yang ingin ditarik: Rp "))
+                self.tarik_uang(jumlah)
+            elif pilihan == '3':
+                print("Terima kasih telah menggunakan mesin ATM.")
+                break
+            else:
+                print("Pilihan tidak valid. Silakan coba lagi.")
+
+        if __name__ == "__main__":
+               atm = ATM()
+              atm.menu()
+
+PROSES INPUT
+
+![kode atm 1](https://github.com/user-attachments/assets/1d6596a7-2bc6-48ab-a08e-3f0bf01d20aa)
+![kode atm 2](https://github.com/user-attachments/assets/11928cef-b53e-40d1-9323-3df47095b013)
+![kode atm 3](https://github.com/user-attachments/assets/609a299c-0bca-4460-86be-126e3ef3e1ff)
+
+HASIL OUTPUT
+![hasil atm](https://github.com/user-attachments/assets/fc52f9cc-fe81-46e8-95ca-a87edbfbb3d8)
 
 
 
