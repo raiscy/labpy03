@@ -137,5 +137,8 @@ PROSES INPUT
 HASIL OUTPUT
 ![hasil atm](https://github.com/user-attachments/assets/fc52f9cc-fe81-46e8-95ca-a87edbfbb3d8)
 
-
-
+PENJELASAN PROGRAM ATM SEDERHANA : 
+1. Metode __init__ berguna ketika membuat suatu instance dari objek yang dipilih. Saldo berfungsi untuk menyampaikan informasi mengenai jumlah uang yang berada di ATM.
+2. Metode tampilkan_saldo berfungsi untuk menampilkan saldo yang tersedia dengan menggunakan format f-string kita dapat menyisipkan nilai kedalam string untuk segara mencetak saldo dengan format yang jelas
+3. tarik_uang menjadi metode untuk menerima satu parameter jumlah yang merupakan jumlah uang yang ingin ditarik.
+4. menu termasuk kedalam Loop tak terbatas yang berguna untuk menjalankan program sampai diberhentikan dengan kata 'break'. menu di dalam lopp mencetak beberapa pilihan seperti : menampilkan saldo, menarik uang dan keluar dari program 
